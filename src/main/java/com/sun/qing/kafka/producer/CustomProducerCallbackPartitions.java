@@ -19,12 +19,9 @@ public class CustomProducerCallbackPartitions {
             // 指定数据发送到 1 号分区，key 为空（IDEA 中 ctrl + p 查看参数）
             kafkaProducer.send(new ProducerRecord<>("first", 1,"","atguigu " + i), new Callback() {
                 @Override
-                public void onCompletion(RecordMetadata metadata,
-                                         Exception e) {
+                public void onCompletion(RecordMetadata metadata, Exception e) {
                     if (e == null){
-                        System.out.println(" 主题： " +
-                                metadata.topic() + "->" + "分区：" + metadata.partition()
-                        );
+                        System.out.println(" 主题： " + metadata.topic() + "->" + "分区：" + metadata.partition());
                     }else {
                         e.printStackTrace();
                     }

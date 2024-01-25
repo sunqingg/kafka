@@ -20,7 +20,7 @@ public class CustomProducerCallBack {
         KafkaProducer<String, String> producer = new KafkaProducer<>(properties);
 
         // 2. 发送消息
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 500; i++) {
             producer.send(new ProducerRecord<>("first", "idea 发过来的" + i), new Callback() {
                 @Override
                 public void onCompletion(RecordMetadata recordMetadata, Exception e) {

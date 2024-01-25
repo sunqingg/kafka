@@ -5,11 +5,12 @@ import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
 import org.apache.kafka.common.serialization.StringDeserializer;
+
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Properties;
 
-public class CustomConsumer {
+public class CustomConsumer3 {
     public static void main(String[] args) {
         // 1.创建消费者的配置对象
         Properties properties = new Properties();
